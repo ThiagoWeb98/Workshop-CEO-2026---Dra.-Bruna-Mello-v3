@@ -11,11 +11,20 @@ const AIAdvisor: React.FC = () => {
 
   const getAdvice = async () => {
     if (!query.trim()) return;
+    
+    // Verificação de segurança para evitar erro de referência em ambientes sem process definido
+    const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
+    
+    if (!apiKey) {
+      setResponse("O sistema de IA requer uma chave de acesso configurada.");
+      return;
+    }
+
     setIsLoading(true);
     setResponse('');
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+      const ai = new GoogleGenAI({ apiKey });
       const res = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: `Você é o Consultor Estratégico da Dra. Bruna Mello no Workshop CEO 2026. 
@@ -44,14 +53,14 @@ const AIAdvisor: React.FC = () => {
       {!isOpen ? (
         <button 
           onClick={() => setIsOpen(true)}
-          className="w-14 h-14 md:w-16 md:h-16 rounded-full brushed-metal flex items-center justify-center shadow-2xl border border-white/10 hover:scale-110 transition-all group"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#c8a178] to-[#9b6d4b] flex items-center justify-center shadow-2xl border border-white/10 hover:scale-110 transition-all group"
         >
           <svg className="w-6 h-6 md:w-8 md:h-8 text-white group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
         </button>
       ) : (
-        <div className="w-[calc(100vw-48px)] max-w-[400px] glass-card rounded-xl border border-[#c8a178]/40 shadow-3xl flex flex-col overflow-hidden">
+        <div className="w-[calc(100vw-48px)] max-w-[400px] bg-[#1a120b] rounded-3xl border border-[#c8a178]/40 shadow-3xl flex flex-col overflow-hidden">
           <div className="p-4 md:p-6 bg-[#1a120b] border-b border-[#c8a178]/20 flex justify-between items-center">
             <div>
               <h4 className="font-serif text-[#f2f0ed] text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em]">Sala de Estratégia</h4>
@@ -64,7 +73,7 @@ const AIAdvisor: React.FC = () => {
             </button>
           </div>
           
-          <div ref={scrollRef} className="p-6 md:p-8 h-[300px] md:h-[400px] overflow-y-auto space-y-6 bg-[#1a120b]/90">
+          <div ref={scrollRef} className="p-6 md:p-8 h-[300px] md:h-[400px] overflow-y-auto space-y-6 bg-[#1a120b]/95">
             <div className="border-l border-[#c8a178] pl-4 py-2 text-[10px] md:text-[11px] text-[#c5a689] italic leading-relaxed">
               "Bem-vinda ao círculo interno. Qual decisão estratégica você precisa tomar hoje para destravar o lucro da sua clínica?"
             </div>
@@ -96,7 +105,7 @@ const AIAdvisor: React.FC = () => {
             <button 
               onClick={getAdvice}
               disabled={isLoading}
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full brushed-metal flex items-center justify-center text-[#1a120b] disabled:opacity-50 shadow-lg"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-[#c8a178] to-[#9b6d4b] flex items-center justify-center text-[#1a120b] disabled:opacity-50 shadow-lg"
             >
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
