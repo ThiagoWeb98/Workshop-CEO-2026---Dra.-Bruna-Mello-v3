@@ -22,7 +22,7 @@ const App: React.FC = () => {
       <nav className="sticky top-0 w-full bg-[#1a120b]/60 backdrop-blur-xl text-[#f2f0ed] py-3 md:py-4 px-4 text-center border-b border-white/5 z-[100] shadow-2xl">
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4">
           <span className="text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.5em] uppercase font-bold text-[#c8a178]">
-            Workshop Planejamento Estratégico 2026
+            WORKSHOP CEO DA CLÍNICA 2026
           </span>
           <span className="hidden md:inline text-[#c8a178]/40">•</span>
           <span className="text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.5em] uppercase font-bold text-[#f2f0ed]">
@@ -96,10 +96,10 @@ const App: React.FC = () => {
       <a
         href="#offer"
         onClick={scrollToOffer}
-        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-[#c8a178] text-[#1a120b] px-10 py-5 md:px-14 md:py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[11px] md:text-[12px] shadow-[0_25px_60px_rgba(200,161,120,0.5)] hover:bg-[#f2f0ed] hover:scale-110 transition-all duration-700 group overflow-hidden block text-center"
+        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-[#c8a178] text-[#1a120b] px-10 py-5 md:px-14 md:py-6 rounded-full font-bold uppercase tracking-[0.3em] text-[10px] md:text-[11px] shadow-[0_25px_60px_rgba(200,161,120,0.5)] hover:bg-[#f2f0ed] hover:scale-110 transition-all duration-700 group overflow-hidden block text-center"
       >
         <span className="relative z-10">
-          Inscrever Agora
+          👉 Garantir minha vaga agora
         </span>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       </a>

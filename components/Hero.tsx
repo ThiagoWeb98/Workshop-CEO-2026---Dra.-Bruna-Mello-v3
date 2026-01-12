@@ -18,31 +18,39 @@ const Hero: React.FC = () => {
             <span className="text-[#c8a178] uppercase tracking-[0.6em] text-[8px] md:text-[10px] font-bold">ESTRATÉGIA DE ALTA PERFORMANCE 2026</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[#f2f0ed] tracking-tight">
-            Planejamento <span className="italic text-[#c8a178]">Estratégico</span> para sua clínica.
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6 text-[#f2f0ed] tracking-tight uppercase">
+            WORKSHOP CEO <br/><span className="italic text-[#c8a178]">DA CLÍNICA 2026</span>
           </h1>
+
+          <h2 className="text-[#f2f0ed] font-medium text-lg md:text-xl tracking-widest mb-8 max-w-xl">
+            PLANEJAMENTO ESTRATÉGICO PARA CLÍNICAS QUE QUEREM LUCRO, NÃO CAOS
+          </h2>
           
-          <p className="text-[#f2f0ed]/60 text-lg md:text-xl leading-relaxed max-w-xl mb-12 font-light italic">
-            3 Encontros ao vivo para definir suas metas e romper a barreira dos 6 dígitos mensais com gestão sólida.
+          <p className="text-[#f2f0ed]/60 text-base md:text-lg leading-relaxed max-w-xl mb-12 font-light italic">
+            3 dias para transformar sua clínica em uma empresa previsível, lucrativa e que funcione sem você no operacional.
           </p>
 
-          <div className="bg-[#9b6d4b]/10 border border-[#c8a178]/20 p-8 rounded-[3.5rem] mb-12 flex flex-wrap gap-10 items-center backdrop-blur-md justify-center lg:justify-start">
-            <div className="flex items-center gap-4">
-              <span className="text-xl">🗓️</span>
-              <span className="text-[#c8a178] text-[10px] md:text-xs font-bold uppercase tracking-wider">20-22 JAN</span>
+          <div className="bg-[#9b6d4b]/10 border border-[#c8a178]/20 p-8 rounded-[3.5rem] mb-12 flex flex-wrap gap-8 items-center backdrop-blur-md justify-center lg:justify-start">
+            <div className="flex items-center gap-3">
+              <span className="text-xl">📅</span>
+              <span className="text-[#c8a178] text-[10px] md:text-xs font-bold uppercase tracking-wider">20 a 22 de Janeiro</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <span className="text-xl">⏰</span>
-              <span className="text-[#c8a178] text-[10px] md:text-xs font-bold uppercase tracking-wider">19h30</span>
+              <span className="text-[#c8a178] text-[10px] md:text-xs font-bold uppercase tracking-wider">20h (ao vivo)</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-xl">🎥</span>
+              <span className="text-[#c8a178] text-[10px] md:text-xs font-bold uppercase tracking-wider">Online + gravações</span>
             </div>
           </div>
           
           <a 
             href="#offer"
             onClick={scrollToOffer}
-            className="bg-[#c8a178] text-[#1a120b] px-12 py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[10px] shadow-2xl hover:bg-[#f2f0ed] transition-all transform hover:-translate-y-1 inline-block"
+            className="bg-[#c8a178] text-[#1a120b] px-12 py-6 rounded-full font-bold uppercase tracking-[0.3em] text-[11px] shadow-2xl hover:bg-[#f2f0ed] transition-all transform hover:-translate-y-1 inline-block"
           >
-            Garantir Minha Vaga
+            👉 Garantir minha vaga agora
           </a>
         </div>
 

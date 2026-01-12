@@ -65,9 +65,9 @@ const Offer: React.FC = () => {
                     href={checkoutUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-[#1a120b] text-[#f2ede7] py-8 rounded-full font-bold uppercase tracking-[0.5em] text-[11px] shadow-2xl hover:bg-[#c8a178] transition-all block text-center"
+                    className="w-full bg-[#1a120b] text-[#f2ede7] py-8 rounded-full font-bold uppercase tracking-[0.3em] text-[11px] shadow-2xl hover:bg-[#c8a178] transition-all block text-center"
                   >
-                    Garantir Meu Acesso
+                    👉 Garantir meu acesso agora
                   </a>
                </div>
             </div>

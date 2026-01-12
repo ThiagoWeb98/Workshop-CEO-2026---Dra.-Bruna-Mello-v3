@@ -68,9 +68,9 @@ const VideoSection: React.FC = () => {
              <a 
               href="#offer"
               onClick={scrollToOffer}
-              className="relative z-10 bg-[#c8a178] text-[#1a120b] px-14 py-6 rounded-full text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#f2f0ed] transition-premium shadow-xl inline-block"
+              className="relative z-10 bg-[#c8a178] text-[#1a120b] px-14 py-6 rounded-full text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-[#f2f0ed] transition-premium shadow-xl inline-block"
              >
-                Garantir Meu Lugar
+                👉 Garantir minha vaga agora
              </a>
           </div>
         </div>
