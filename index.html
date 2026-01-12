@@ -16,7 +16,6 @@
             --color-pearl: #f2ede7;
             --color-bronze: #9b6d4b;
             --color-ivory: #f2f0ed;
-            --transition-luxury: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         
         html { scroll-behavior: smooth; }
@@ -25,9 +24,9 @@
             background-color: var(--color-espresso);
             color: var(--color-ivory);
             font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            margin: 0; padding: 0;
         }
 
         .font-serif { font-family: 'Bodoni Moda', serif; }
@@ -38,25 +37,11 @@
             opacity: 0.015; pointer-events: none; z-index: 9999;
         }
 
-        .bg-luxury-gradient { background: radial-gradient(circle at 75% 50%, #4a3728 0%, #1a120b 80%); }
-
-        @keyframes float-luxury {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(0.1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+        @keyframes pulse {
+            0% { transform: scaleX(0.5); opacity: 0.2; }
+            50% { transform: scaleX(1.5); opacity: 0.8; }
+            100% { transform: scaleX(0.5); opacity: 0.2; }
         }
-        .animate-float { animation: float-luxury 9s ease-in-out infinite; }
-
-        .slide-reveal {
-            opacity: 0; transform: translateY(40px);
-            transition: opacity 1.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .slide-reveal.active { opacity: 1; transform: translateY(0); }
-        .transition-premium { transition: var(--transition-luxury); }
-
-        ::-webkit-scrollbar { width: 3px; }
-        ::-webkit-scrollbar-track { background: var(--color-espresso); }
-        ::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 10px; }
     </style>
     <script type="importmap">
 {
@@ -72,32 +57,8 @@
 </script>
 </head>
 <body>
-    <div id="root">
-        <div id="initial-loader" style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #1a120b; flex-direction: column; gap: 20px;">
-            <div style="width: 40px; height: 1px; background: #c8a178; animation: pulse 2s infinite;"></div>
-            <span style="color: #c8a178; font-size: 8px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.5;">Loading Experience</span>
-        </div>
-    </div>
-    <script type="module">
-        import './index.tsx';
-        // Remove loader after React mounts
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('initial-loader');
-            if(loader) loader.style.display = 'none';
-        });
-    </script>
-    <script>
-        window.onerror = function(msg, url, line, col, error) {
-            console.error("Erro Detectado: ", msg, " no arquivo: ", url);
-            return false;
-        };
-    </script>
-    <style>
-        @keyframes pulse {
-            0% { transform: scaleX(0.5); opacity: 0.2; }
-            50% { transform: scaleX(1.5); opacity: 0.8; }
-            100% { transform: scaleX(0.5); opacity: 0.2; }
-        }
-    </style>
+    <div id="root"></div>
+    <!-- Carregamento direto do módulo principal -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
