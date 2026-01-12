@@ -1,15 +1,15 @@
 
 import React from 'react';
-import Hero from './components/Hero';
-import PainPleasure from './components/PainPleasure';
-import VideoSection from './components/VideoSection';
-import AccessSection from './components/AccessSection';
-import ToolboxSection from './components/ToolboxSection';
-import DiscountTicker from './components/DiscountTicker';
-import Offer from './components/Offer';
-import Guarantee from './components/Guarantee';
-import FAQ from './components/FAQ';
-import AIAdvisor from './components/AIAdvisor';
+import Hero from './components/Hero.tsx';
+import PainPleasure from './components/PainPleasure.tsx';
+import VideoSection from './components/VideoSection.tsx';
+import AccessSection from './components/AccessSection.tsx';
+import ToolboxSection from './components/ToolboxSection.tsx';
+import DiscountTicker from './components/DiscountTicker.tsx';
+import Offer from './components/Offer.tsx';
+import Guarantee from './components/Guarantee.tsx';
+import FAQ from './components/FAQ.tsx';
+import AIAdvisor from './components/AIAdvisor.tsx';
 
 const App: React.FC = () => {
   return (

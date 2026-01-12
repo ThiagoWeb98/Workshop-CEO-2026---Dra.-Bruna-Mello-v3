@@ -55,10 +55,6 @@
             background: radial-gradient(circle at 75% 50%, #4a3728 0%, #1a120b 80%);
         }
 
-        .shadow-soft {
-            box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.2);
-        }
-
         @keyframes float-luxury {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-15px) rotate(0.1deg); }
@@ -109,8 +105,19 @@
 </script>
 </head>
 <body>
-    <div id="root"></div>
-    <!-- Entry point script -->
+    <div id="root">
+        <!-- Loader inicial preventivo -->
+        <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #1a120b;">
+            <div style="width: 40px; height: 1px; background: #c8a178; animation: pulse 2s infinite;"></div>
+        </div>
+    </div>
     <script type="module" src="./index.tsx"></script>
+    <style>
+        @keyframes pulse {
+            0% { transform: scaleX(0.5); opacity: 0.2; }
+            50% { transform: scaleX(1.5); opacity: 0.8; }
+            100% { transform: scaleX(0.5); opacity: 0.2; }
+        }
+    </style>
 </body>
 </html>
