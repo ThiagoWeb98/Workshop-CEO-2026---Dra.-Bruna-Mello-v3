@@ -11,7 +11,10 @@ import Guarantee from './components/Guarantee.tsx';
 import FAQ from './components/FAQ.tsx';
 
 const App: React.FC = () => {
-  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
+  const scrollToOffer = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen selection:bg-[#c8a178] selection:text-[#1a120b] bg-[#1a120b]">
@@ -89,11 +92,10 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      {/* Floating Purchase Button - Updated to Checkout Link */}
+      {/* Floating Purchase Button - Scrolls to Offer Section */}
       <a
-        href={checkoutUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#offer"
+        onClick={scrollToOffer}
         className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-[#c8a178] text-[#1a120b] px-10 py-5 md:px-14 md:py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[11px] md:text-[12px] shadow-[0_25px_60px_rgba(200,161,120,0.5)] hover:bg-[#f2f0ed] hover:scale-110 transition-all duration-700 group overflow-hidden block text-center"
       >
         <span className="relative z-10">

@@ -2,7 +2,10 @@
 import React from 'react';
 
 const VideoSection: React.FC = () => {
-  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
+  const scrollToOffer = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const testimonials = [
     {
@@ -63,9 +66,8 @@ const VideoSection: React.FC = () => {
              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
              <h4 className="font-serif text-[#f2ede7] text-3xl md:text-5xl italic mb-8 relative z-10 max-w-2xl mx-auto">Sua clínica será a próxima história de sucesso.</h4>
              <a 
-              href={checkoutUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#offer"
+              onClick={scrollToOffer}
               className="relative z-10 bg-[#c8a178] text-[#1a120b] px-14 py-6 rounded-full text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#f2f0ed] transition-premium shadow-xl inline-block"
              >
                 Garantir Meu Lugar
