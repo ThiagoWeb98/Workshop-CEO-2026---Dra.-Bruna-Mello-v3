@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Offer: React.FC = () => {
+  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
+
   const benefits = [
     "3 Encontros Ao Vivo (Estratégico)",
     "Acesso às Gravações por 1 Ano",
@@ -59,9 +61,14 @@ const Offer: React.FC = () => {
                     </p>
                   </div>
 
-                  <button className="w-full bg-[#1a120b] text-[#f2ede7] py-8 rounded-full font-bold uppercase tracking-[0.5em] text-[11px] shadow-2xl hover:bg-[#c8a178] transition-all">
+                  <a 
+                    href={checkoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#1a120b] text-[#f2ede7] py-8 rounded-full font-bold uppercase tracking-[0.5em] text-[11px] shadow-2xl hover:bg-[#c8a178] transition-all block text-center"
+                  >
                     Garantir Meu Acesso
-                  </button>
+                  </a>
                </div>
             </div>
           </div>

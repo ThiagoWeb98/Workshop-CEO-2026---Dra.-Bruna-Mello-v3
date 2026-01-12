@@ -2,9 +2,7 @@
 import React from 'react';
 
 const VideoSection: React.FC = () => {
-  const scrollToOffer = () => {
-    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
 
   const testimonials = [
     {
@@ -64,12 +62,14 @@ const VideoSection: React.FC = () => {
           <div className="bg-gradient-to-br from-[#9b6d4b] to-[#1a120b] p-10 md:p-16 rounded-[5.5rem] text-center shadow-2xl flex flex-col items-center justify-center border border-[#c8a178]/30 relative overflow-hidden group md:col-span-2 lg:col-span-3 lg:mt-12">
              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
              <h4 className="font-serif text-[#f2ede7] text-3xl md:text-5xl italic mb-8 relative z-10 max-w-2xl mx-auto">Sua clínica será a próxima história de sucesso.</h4>
-             <button 
-              onClick={scrollToOffer}
-              className="relative z-10 bg-[#c8a178] text-[#1a120b] px-14 py-6 rounded-full text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#f2f0ed] transition-premium shadow-xl"
+             <a 
+              href={checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 bg-[#c8a178] text-[#1a120b] px-14 py-6 rounded-full text-[11px] uppercase tracking-[0.4em] font-bold hover:bg-[#f2f0ed] transition-premium shadow-xl inline-block"
              >
                 Garantir Meu Lugar
-             </button>
+             </a>
           </div>
         </div>
       </div>

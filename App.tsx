@@ -9,13 +9,14 @@ import DiscountTicker from './components/DiscountTicker.tsx';
 import Offer from './components/Offer.tsx';
 import Guarantee from './components/Guarantee.tsx';
 import FAQ from './components/FAQ.tsx';
-import AIAdvisor from './components/AIAdvisor.tsx';
 
 const App: React.FC = () => {
+  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
+
   return (
     <div className="min-h-screen selection:bg-[#c8a178] selection:text-[#1a120b] bg-[#1a120b]">
-      {/* Navigation Bar - Sticky Ivory/Espresso */}
-      <nav className="sticky top-0 w-full bg-[#1a120b]/95 backdrop-blur-md text-[#f2f0ed] py-3 md:py-4 px-4 text-center border-b border-[#c8a178]/20 z-[100] shadow-xl">
+      {/* Navigation Bar - Glass Effect Optimized */}
+      <nav className="sticky top-0 w-full bg-[#1a120b]/60 backdrop-blur-xl text-[#f2f0ed] py-3 md:py-4 px-4 text-center border-b border-white/5 z-[100] shadow-2xl">
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-1 md:gap-4">
           <span className="text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.5em] uppercase font-bold text-[#c8a178]">
             Workshop Planejamento Estratégico 2026
@@ -36,7 +37,7 @@ const App: React.FC = () => {
       
       <ToolboxSection />
       
-      {/* Bio Section - Deep Espresso with Metallic Gold Accents */}
+      {/* Bio Section */}
       <section className="py-24 md:py-40 bg-[#1a120b] border-y border-[#c8a178]/10 relative overflow-hidden">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center relative z-10">
           <div className="order-2 lg:order-1 aspect-[3/4] md:aspect-square lg:aspect-[3/4] max-w-lg mx-auto w-full bg-[#241b14] relative shadow-[0_30px_60px_rgba(0,0,0,0.8)] group overflow-hidden rounded-[4.5rem]">
@@ -48,9 +49,6 @@ const App: React.FC = () => {
              />
              <div className="absolute inset-0 border border-[#c8a178]/20 group-hover:scale-95 transition-transform duration-1000 pointer-events-none rounded-[4.5rem]"></div>
              <div className="absolute inset-0 bg-gradient-to-t from-[#1a120b] via-transparent to-transparent opacity-60"></div>
-             <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-                <span className="font-serif italic text-[#f2f0ed] text-3xl md:text-4xl tracking-[0.3em]">Portrait</span>
-             </div>
              <div className="absolute bottom-10 left-10">
                 <p className="text-[#c8a178] uppercase tracking-[0.5em] text-[8px] md:text-[10px] font-bold mb-2">The Founder</p>
                 <h3 className="font-serif text-2xl md:text-3xl text-[#f2f0ed]">Dra. Bruna Mello</h3>
@@ -67,10 +65,6 @@ const App: React.FC = () => {
               <p>
                 A virada aconteceu quando entendi que <span className="italic text-[#c8a178]">amor pela estética não paga conta. Gestão paga.</span> Hoje, minha missão é poupar você de 10 anos de erros através de uma gestão sólida e validada.
               </p>
-              <div className="pt-6 flex flex-col items-center lg:items-start">
-                 <div className="w-16 h-px bg-[#c8a178] mb-4"></div>
-                 <p className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] font-bold text-[#c8a178]">Fundadora do Método Acelera Clínicas</p>
-              </div>
             </div>
           </div>
         </div>
@@ -84,24 +78,29 @@ const App: React.FC = () => {
       <FAQ />
       
       <footer className="bg-[#1a120b] py-20 md:py-32 px-6 border-t border-[#c8a178]/5">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-center md:text-left">
-            <h3 className="font-serif text-2xl md:text-3xl mb-2 tracking-[0.3em] md:tracking-[0.4em] uppercase text-[#f2f0ed]">WORKSHOP CEO</h3>
+            <h3 className="font-serif text-2xl mb-2 tracking-[0.3em] uppercase text-[#f2f0ed]">WORKSHOP CEO</h3>
             <p className="text-[#c8a178] text-[8px] tracking-[0.5em] uppercase font-bold">The Gold Standard in Strategy</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-14 text-[#f2f0ed]/50 text-[8px] md:text-[9px] uppercase tracking-[0.4em] font-bold">
-            <a href="#" className="hover:text-[#c8a178] transition-colors">Privacidade</a>
-            <a href="#" className="hover:text-[#c8a178] transition-colors">Termos</a>
-            <a href="#" className="hover:text-[#c8a178] transition-colors">Support Center</a>
-          </div>
-          <div className="text-[#f2f0ed]/20 text-[8px] md:text-[9px] tracking-[0.2em] leading-loose text-center md:text-right">
-            TODOS OS DIREITOS RESERVADOS.<br/>
+          <div className="text-[#f2f0ed]/20 text-[8px] tracking-[0.2em] text-center md:text-right">
             DRA. BRUNA MELLO - ACELERA CLÍNICAS © 2026.
           </div>
         </div>
       </footer>
 
-      <AIAdvisor />
+      {/* Floating Purchase Button - Updated to Checkout Link */}
+      <a
+        href={checkoutUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] bg-[#c8a178] text-[#1a120b] px-10 py-5 md:px-14 md:py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[11px] md:text-[12px] shadow-[0_25px_60px_rgba(200,161,120,0.5)] hover:bg-[#f2f0ed] hover:scale-110 transition-all duration-700 group overflow-hidden block text-center"
+      >
+        <span className="relative z-10">
+          Inscrever Agora
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+      </a>
     </div>
   );
 };

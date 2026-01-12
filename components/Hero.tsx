@@ -2,9 +2,7 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const scrollToOffer = () => {
-    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const checkoutUrl = "https://payfast.greenn.com.br/pre-checkout/153010";
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#1a120b]">
@@ -36,12 +34,14 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <button 
-            onClick={scrollToOffer}
-            className="bg-[#c8a178] text-[#1a120b] px-12 py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[10px] shadow-2xl hover:bg-[#f2f0ed] transition-all transform hover:-translate-y-1"
+          <a 
+            href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#c8a178] text-[#1a120b] px-12 py-6 rounded-full font-bold uppercase tracking-[0.4em] text-[10px] shadow-2xl hover:bg-[#f2f0ed] transition-all transform hover:-translate-y-1 inline-block"
           >
             Garantir Minha Vaga
-          </button>
+          </a>
         </div>
 
         <div className="relative flex items-center justify-center order-1 lg:order-2">
