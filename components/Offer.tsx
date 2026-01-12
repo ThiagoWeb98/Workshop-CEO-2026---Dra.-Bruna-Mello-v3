@@ -21,10 +21,10 @@ const Offer: React.FC = () => {
           
           <div className="relative w-full max-w-[340px] md:max-w-[450px] perspective-[3000px]">
             
-            {/* 3D Floating Ticket - Rounded corners (rounded-3xl) */}
+            {/* 3D Floating Ticket - Rounded corners (rounded-[2.5rem]) */}
             <div className="absolute -top-16 md:-top-28 left-1/2 -translate-x-1/2 w-64 md:w-80 h-36 md:h-52 z-30 transition-premium hover:scale-105">
                <div 
-                 className="w-full h-full rounded-[2rem] shadow-2xl flex flex-col p-6 md:p-10 relative overflow-hidden border border-white/10 animate-float"
+                 className="w-full h-full rounded-[2.5rem] shadow-2xl flex flex-col p-6 md:p-10 relative overflow-hidden border border-white/10 animate-float"
                  style={{
                    background: 'linear-gradient(135deg, #c8a178 0%, #9b6d4b 50%, #c8a178 100%)',
                    transform: 'rotateY(-12deg) rotateX(8deg)',
@@ -45,8 +45,8 @@ const Offer: React.FC = () => {
                </div>
             </div>
 
-            {/* Elegant Card - Soft Pearl Background (#f2ede7) - Rounded-3xl */}
-            <div className="bg-[#f2ede7] rounded-[3.5rem] shadow-2xl p-10 md:p-16 pt-28 md:pt-40 relative overflow-hidden border border-[#c8a178]/20 transition-premium hover:shadow-3xl">
+            {/* Elegant Card - Soft Pearl Background (#f2ede7) - Rounded-[4.5rem] */}
+            <div className="bg-[#f2ede7] rounded-[5.5rem] shadow-2xl p-10 md:p-16 pt-28 md:pt-40 relative overflow-hidden border border-[#c8a178]/20 transition-premium hover:shadow-3xl">
                <div className="absolute inset-0 opacity-[0.05] bg-[url('assets/texture-paper.png')] pointer-events-none"></div>
                
                <div className="text-center">
@@ -56,7 +56,7 @@ const Offer: React.FC = () => {
                   <ul className="space-y-6 mb-16 text-left border-y border-[#1a120b]/5 py-12">
                     {benefits.map((benefit, i) => (
                       <li key={i} className="flex items-center gap-5 group">
-                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-[#c8a178] to-[#9b6d4b] flex items-center justify-center shadow-lg transition-premium group-hover:scale-110">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#c8a178] to-[#9b6d4b] flex items-center justify-center shadow-lg transition-premium group-hover:scale-110">
                           <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
                           </svg>

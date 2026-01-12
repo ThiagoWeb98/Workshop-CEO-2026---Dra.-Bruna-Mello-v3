@@ -39,19 +39,19 @@ const App: React.FC = () => {
       {/* Bio Section - Deep Espresso with Metallic Gold Accents */}
       <section className="py-24 md:py-40 bg-[#1a120b] border-y border-[#c8a178]/10 relative overflow-hidden">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center relative z-10">
-          <div className="order-2 lg:order-1 aspect-[3/4] md:aspect-square lg:aspect-[3/4] max-w-lg mx-auto w-full bg-[#241b14] relative shadow-[0_30px_60px_rgba(0,0,0,0.8)] group overflow-hidden">
+          <div className="order-2 lg:order-1 aspect-[3/4] md:aspect-square lg:aspect-[3/4] max-w-lg mx-auto w-full bg-[#241b14] relative shadow-[0_30px_60px_rgba(0,0,0,0.8)] group overflow-hidden rounded-[4.5rem]">
              <img 
                src="assets/dra-bruna-bio.webp" 
                alt="Dra. Bruna Mello" 
                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000"
                onError={(e) => { e.currentTarget.style.display = 'none'; }}
              />
-             <div className="absolute inset-0 border border-[#c8a178]/20 group-hover:scale-95 transition-transform duration-1000 pointer-events-none"></div>
+             <div className="absolute inset-0 border border-[#c8a178]/20 group-hover:scale-95 transition-transform duration-1000 pointer-events-none rounded-[4.5rem]"></div>
              <div className="absolute inset-0 bg-gradient-to-t from-[#1a120b] via-transparent to-transparent opacity-60"></div>
              <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
                 <span className="font-serif italic text-[#f2f0ed] text-3xl md:text-4xl tracking-[0.3em]">Portrait</span>
              </div>
-             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+             <div className="absolute bottom-10 left-10">
                 <p className="text-[#c8a178] uppercase tracking-[0.5em] text-[8px] md:text-[10px] font-bold mb-2">The Founder</p>
                 <h3 className="font-serif text-2xl md:text-3xl text-[#f2f0ed]">Dra. Bruna Mello</h3>
              </div>

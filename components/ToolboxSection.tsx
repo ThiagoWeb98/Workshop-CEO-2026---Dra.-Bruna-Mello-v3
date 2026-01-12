@@ -46,7 +46,7 @@ const ToolboxSection: React.FC = () => {
               "Ferramentas executivas prontas para aplicar e colher resultados imediatos."
             </p>
           </div>
-          <div className="flex flex-col items-center lg:items-end bg-white/60 p-8 rounded-[2rem] border border-[#c8a178]/20 backdrop-blur-sm">
+          <div className="flex flex-col items-center lg:items-end bg-white/60 p-8 px-12 rounded-full border border-[#c8a178]/20 backdrop-blur-sm">
             <span className="text-[#1a120b] font-serif text-4xl mb-2">R$ 391,00</span>
             <span className="text-[#9b6d4b] text-[9px] uppercase tracking-[0.4em] font-bold opacity-60">Valor total incluso</span>
           </div>
@@ -54,8 +54,8 @@ const ToolboxSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {tools.map((tool, i) => (
-            <div key={i} className="group bg-white/80 p-10 md:p-16 rounded-[3rem] border border-[#c8a178]/10 hover:border-[#c8a178]/40 transition-premium relative overflow-hidden shadow-soft hover:shadow-2xl">
-              <div className="absolute top-8 right-10 text-6xl opacity-10 group-hover:scale-125 transition-premium grayscale group-hover:grayscale-0 pointer-events-none">
+            <div key={i} className="group bg-white/80 p-10 md:p-16 rounded-[4.5rem] border border-[#c8a178]/10 hover:border-[#c8a178]/40 transition-premium relative overflow-hidden shadow-soft hover:shadow-2xl">
+              <div className="absolute top-12 right-12 text-6xl opacity-10 group-hover:scale-125 transition-premium grayscale group-hover:grayscale-0 pointer-events-none">
                 {tool.icon}
               </div>
               

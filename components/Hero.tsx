@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             3 Encontros ao vivo para definir suas Metas Financeiras, Organizar sua Equipe e Traçar o Plano de Ação para romper a barreira dos 6 dígitos mensais.
           </p>
 
-          <div className="bg-[#9b6d4b]/10 border border-[#c8a178]/20 p-6 md:p-8 rounded-3xl mb-12 md:mb-16 flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-12 items-center backdrop-blur-md w-full max-w-xl lg:max-w-none justify-center lg:justify-start transition-premium hover:bg-[#9b6d4b]/15">
+          <div className="bg-[#9b6d4b]/10 border border-[#c8a178]/20 p-6 md:p-8 rounded-[2.5rem] mb-12 md:mb-16 flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-12 items-center backdrop-blur-md w-full max-w-xl lg:max-w-none justify-center lg:justify-start transition-premium hover:bg-[#9b6d4b]/15">
             <div className="flex items-center gap-4">
               <span className="text-xl opacity-80">🗓️</span>
               <div className="flex flex-col text-left">
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative flex items-center justify-center order-1 lg:order-2 slide-reveal active">
-           <div className="w-full max-w-xs md:max-w-md lg:max-w-lg aspect-[4/5] bg-[#241b14] rounded-[2.5rem] border border-[#c8a178]/10 shadow-2xl relative group overflow-hidden">
+           <div className="w-full max-w-xs md:max-w-md lg:max-w-lg aspect-[4/5] bg-[#241b14] rounded-[4rem] border border-[#c8a178]/10 shadow-2xl relative group overflow-hidden">
               <img 
                 src="assets/dra-bruna-hero.webp" 
                 alt="Dra. Bruna Mello - CEO" 

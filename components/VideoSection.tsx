@@ -40,7 +40,7 @@ const VideoSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-[#f2ede7] p-10 md:p-14 rounded-[2.5rem] relative group border border-[#c8a178]/10 shadow-soft flex flex-col justify-between transition-premium hover:-translate-y-3 hover:shadow-2xl">
+            <div key={i} className="bg-[#f2ede7] p-10 md:p-14 rounded-[4.5rem] relative group border border-[#c8a178]/10 shadow-soft flex flex-col justify-between transition-premium hover:-translate-y-3 hover:shadow-2xl">
               <div>
                 <div className="text-5xl font-serif text-[#c8a178]/30 group-hover:text-[#c8a178]/50 transition-premium mb-6">“</div>
                 <p className="text-[#1a120b]/80 text-base md:text-lg leading-relaxed mb-10 font-light italic relative z-10">
@@ -53,7 +53,7 @@ const VideoSection: React.FC = () => {
                   <span className="text-[#1a120b] font-serif text-xl tracking-wide">{t.name}</span>
                   <span className="text-[#9b6d4b] text-[9px] uppercase tracking-[0.4em] font-bold mt-2">{t.role}</span>
                 </div>
-                <div className="mt-8 flex justify-between items-center bg-white/50 p-4 rounded-2xl border-l-4 border-[#c8a178]">
+                <div className="mt-8 flex justify-between items-center bg-white/50 p-4 rounded-full px-8 border-l-4 border-[#c8a178]">
                   <span className="text-[#9b6d4b] text-[8px] uppercase tracking-widest font-bold">KPI:</span>
                   <span className="text-[#1a120b] text-[11px] font-bold tracking-tight">{t.result}</span>
                 </div>
@@ -61,7 +61,7 @@ const VideoSection: React.FC = () => {
             </div>
           ))}
           
-          <div className="bg-gradient-to-br from-[#9b6d4b] to-[#1a120b] p-10 md:p-16 rounded-[3rem] text-center shadow-2xl flex flex-col items-center justify-center border border-[#c8a178]/30 relative overflow-hidden group md:col-span-2 lg:col-span-3 lg:mt-12">
+          <div className="bg-gradient-to-br from-[#9b6d4b] to-[#1a120b] p-10 md:p-16 rounded-[5.5rem] text-center shadow-2xl flex flex-col items-center justify-center border border-[#c8a178]/30 relative overflow-hidden group md:col-span-2 lg:col-span-3 lg:mt-12">
              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-linen.png')]"></div>
              <h4 className="font-serif text-[#f2ede7] text-3xl md:text-5xl italic mb-8 relative z-10 max-w-2xl mx-auto">Sua clínica será a próxima história de sucesso.</h4>
              <button 

@@ -60,8 +60,8 @@ const AIAdvisor: React.FC = () => {
           </svg>
         </button>
       ) : (
-        <div className="w-[calc(100vw-48px)] max-w-[400px] bg-[#1a120b] rounded-3xl border border-[#c8a178]/40 shadow-3xl flex flex-col overflow-hidden">
-          <div className="p-4 md:p-6 bg-[#1a120b] border-b border-[#c8a178]/20 flex justify-between items-center">
+        <div className="w-[calc(100vw-48px)] max-w-[400px] bg-[#1a120b] rounded-[3.5rem] border border-[#c8a178]/40 shadow-3xl flex flex-col overflow-hidden">
+          <div className="p-4 md:p-8 bg-[#1a120b] border-b border-[#c8a178]/20 flex justify-between items-center">
             <div>
               <h4 className="font-serif text-[#f2f0ed] text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em]">Sala de Estratégia</h4>
               <p className="text-[7px] md:text-[8px] text-[#c8a178] uppercase tracking-[0.4em] mt-1 font-bold">Consultoria AI Exclusiva</p>
@@ -73,8 +73,8 @@ const AIAdvisor: React.FC = () => {
             </button>
           </div>
           
-          <div ref={scrollRef} className="p-6 md:p-8 h-[300px] md:h-[400px] overflow-y-auto space-y-6 bg-[#1a120b]/95">
-            <div className="border-l border-[#c8a178] pl-4 py-2 text-[10px] md:text-[11px] text-[#c5a689] italic leading-relaxed">
+          <div ref={scrollRef} className="p-6 md:p-10 h-[300px] md:h-[400px] overflow-y-auto space-y-6 bg-[#1a120b]/95">
+            <div className="border-l border-[#c8a178] pl-6 py-2 text-[10px] md:text-[11px] text-[#c5a689] italic leading-relaxed">
               "Bem-vinda ao círculo interno. Qual decisão estratégica você precisa tomar hoje para destravar o lucro da sua clínica?"
             </div>
             
@@ -86,21 +86,21 @@ const AIAdvisor: React.FC = () => {
             
             {isLoading && (
               <div className="flex gap-1.5 items-center">
-                <div className="w-1 h-1 bg-[#c8a178] rounded-full animate-bounce"></div>
-                <div className="w-1 h-1 bg-[#c8a178] rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                <div className="w-1 h-1 bg-[#c8a178] rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                <div className="w-1.5 h-1.5 bg-[#c8a178] rounded-full animate-bounce"></div>
+                <div className="w-1.5 h-1.5 bg-[#c8a178] rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                <div className="w-1.5 h-1.5 bg-[#c8a178] rounded-full animate-bounce [animation-delay:0.4s]"></div>
               </div>
             )}
           </div>
           
-          <div className="p-4 md:p-6 bg-[#1a120b] flex gap-3">
+          <div className="p-4 md:p-8 bg-[#1a120b] flex gap-3">
             <input 
               type="text" 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && getAdvice()}
               placeholder="Sua dúvida..."
-              className="flex-1 bg-black/20 border border-[#c8a178]/30 rounded-full px-5 py-2.5 text-[10px] md:text-[11px] text-[#f2f0ed] focus:outline-none focus:border-[#c8a178]/40 transition-colors"
+              className="flex-1 bg-black/20 border border-[#c8a178]/30 rounded-full px-6 py-3 text-[10px] md:text-[11px] text-[#f2f0ed] focus:outline-none focus:border-[#c8a178]/40 transition-colors"
             />
             <button 
               onClick={getAdvice}

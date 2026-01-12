@@ -42,7 +42,7 @@ const PainPleasure: React.FC = () => {
             <div className="w-px h-20 md:h-28 bg-gradient-to-b from-[#c8a178] to-transparent"></div>
           </div>
           
-          <div className="bg-[#1a120b] border border-[#c8a178]/20 p-10 md:p-20 rounded-[3rem] relative overflow-hidden group shadow-soft transition-premium hover:shadow-2xl">
+          <div className="bg-[#1a120b] border border-[#c8a178]/20 p-10 md:p-20 rounded-[5rem] relative overflow-hidden group shadow-soft transition-premium hover:shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#c8a178]/10 blur-[100px] rounded-full pointer-events-none"></div>
             <p className="text-[#f2f0ed] text-2xl md:text-3xl lg:text-5xl font-serif italic leading-[1.2] text-center relative z-10 max-w-5xl mx-auto">
               "Sua rotina é um caos silencioso. Você não está cansada de trabalhar. <span className="text-[#c8a178] not-italic font-sans font-bold uppercase tracking-tight block md:inline mt-4 md:mt-0">Você está cansada de trabalhar errado.</span>"
@@ -52,7 +52,7 @@ const PainPleasure: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20 md:mb-40">
           {personas.map((p, i) => (
-            <div key={i} className="bg-white/40 backdrop-blur-md p-10 md:p-16 rounded-[2.5rem] border border-[#c8a178]/10 group transition-premium hover:bg-white/80 hover:shadow-xl relative overflow-hidden">
+            <div key={i} className="bg-white/40 backdrop-blur-md p-10 md:p-16 rounded-[4rem] border border-[#c8a178]/10 group transition-premium hover:bg-white/80 hover:shadow-xl relative overflow-hidden">
               <span className="absolute -right-8 -bottom-12 font-serif italic text-[15rem] text-[#c8a178]/5 group-hover:text-[#c8a178]/10 transition-premium pointer-events-none">
                 {p.num}
               </span>
@@ -67,7 +67,7 @@ const PainPleasure: React.FC = () => {
           ))}
         </div>
 
-        <div className="max-w-6xl mx-auto bg-[#1a120b] border border-[#c8a178]/30 p-12 md:p-24 rounded-[3.5rem] relative shadow-2xl overflow-hidden transition-premium hover:shadow-3xl">
+        <div className="max-w-6xl mx-auto bg-[#1a120b] border border-[#c8a178]/30 p-12 md:p-24 rounded-[5.5rem] relative shadow-2xl overflow-hidden transition-premium hover:shadow-3xl">
            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#c8a17811,transparent)] pointer-events-none"></div>
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <div className="text-center lg:text-left">
